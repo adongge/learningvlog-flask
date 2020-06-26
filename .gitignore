@@ -1,0 +1,15 @@
+# .gitignore
+.DS_Store
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+*.pyc
+*__pycache__*
+
+
+*/venv/*
