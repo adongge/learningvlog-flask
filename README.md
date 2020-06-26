@@ -29,7 +29,7 @@ flask 学习笔记
     1. 安装 pip install uwsgi
     2. 配置 uwsgi.dev.ini 文件
     3. 运行 venv/bin/uwsgi uwsgi.dev.ini
-    4. 方便后面统一环境，可将venv目录设置在其他位置
+    4. 方便后面统一环境，可将venv目录设置
 
 
 ```ini
