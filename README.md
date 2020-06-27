@@ -29,7 +29,7 @@ flask 学习笔记
     1. 安装 pip install uwsgi
     2. 配置 uwsgi.dev.ini 文件
     3. 运行 venv/bin/uwsgi uwsgi.dev.ini
-    4. 方便后面统一环境，可将venv目录设置
+    4. 😏😏😏完成
 
 
 ```ini
@@ -37,20 +37,8 @@ flask 学习笔记
 [uwsgi]
 chdir=/Users/adong/learning/learningvlog-flask/c3
 wsgi-file = /Users/adong/learning/learningvlog-flask/c3/app.py
+home=/Users/adong/learning/learningvlog-flask/venv
 callable = app
 http = 127.0.0.1:5000
-# socket = :5000
-processes = 4
-threads = 2
-master = true
-chmod-socket = 660
-vacuum = true
-die-on-term = true
-logfile-chmod=777
-home=/Users/adong/learning/learningvlog-flask/c3/venv
-# pidfile = /Users/adong/uwsgi.pid
-py-autoreload=1
-reload-mercy = 1
-worker-reload-mercy = 1
 
 ```
