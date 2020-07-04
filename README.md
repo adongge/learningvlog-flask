@@ -52,28 +52,7 @@ http = 127.0.0.1:5000
 - 前后端分离，统一返回json响应格式
     1. 创建类JSONEncoder.py 转换部分需要的python对象为json
     修改app JSONEncoder处理对象 😀done
-    2. 创建类APIResponse.py 返回固定格式json
+    2. 创建类APIResponse.py 返回固定格式json 😀done
     3. 创建api_route.py 将1、2 过程交由 api_route.py处理，不用每次return重复编写，默认返回统一是json格式的数据
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## c6 
-- 前后端分离，统一异常/错误响应格式
-    2. 
+    搞定
