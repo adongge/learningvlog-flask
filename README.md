@@ -56,3 +56,10 @@ http = 127.0.0.1:5000
     3. 创建api_route.py 将1、2 过程交由 api_route.py处理，不用每次return重复编写，默认返回统一是json格式的数据
 
     搞定
+
+
+## c6 
+- 前后端分离，统一异常/错误响应格式
+    1. 创建APIException.py 自定义异常类
+    2. 创建error_handlers.py 处理falsk等python异常
+    3. done
