@@ -63,3 +63,40 @@ http = 127.0.0.1:5000
     1. 创建APIException.py 自定义异常类
     2. 创建error_handlers.py 处理falsk等python异常
     3. done
+
+
+## c7
+- SQLAlchemy 安装，创建Model model返回json
+    1. 安装 pip install pymysql flask-sqlalchemy
+        - 配置 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@127.0.0.1/test'
+        - db = SQLAlchemy(app)
+    2. 创建 Models目录,安装 pip install flask-sqlacodegen  使用 flask-sqlacodegen 生成Model
+        - flask-sqlacodegen 'mysql+pymysql://root:123456@localhost/test?charset=utf8' --outfile "c7/Models/User.py" --flask
+    3. 以json 返回 model 
+        - 创建 model 基础抽象类
+        - model 返回json
+
+    done 😀
+
+
+```SQL
+
+CREATE TABLE `user` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键自增',
+  `username` varchar(16) NOT NULL COMMENT '用户名',
+  `nickname` varchar(32) NOT NULL COMMENT '昵称',
+  `description` VARCHAR(200) NULL COMMENT '描述',
+  `password` varchar(64) NOT NULL COMMENT '密码',
+  `status` int(2) unsigned NOT NULL DEFAULT '0' COMMENT '用户状态，0 正常，1禁用',
+  `mobile` varchar(15) NOT NULL DEFAULT '' COMMENT '手机号',
+  `update_dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='用户基本信息';
+
+```
+
+```shell
+flask-sqlacodegen 'mysql+pymysql://root:123456@localhost/test?charset=utf8' --outfile "c7/Models/User.py" --flask
+```
