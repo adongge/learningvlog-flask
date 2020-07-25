@@ -1,0 +1,13 @@
+version: '3.3'
+
+services: 
+    flask:
+        image: flask:1.0
+        container_name: flaskv1
+        restart: always
+        volumes: 
+            - "/Users/adong/learning/learningvlog-flask:/Users/adong/learning/learningvlog-flask"
+        ports: 
+            - "5000:5000"
+
+# docker-compose up

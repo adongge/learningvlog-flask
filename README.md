@@ -100,3 +100,21 @@ CREATE TABLE `user` (
 ```shell
 flask-sqlacodegen 'mysql+pymysql://root:123456@localhost/test?charset=utf8' --outfile "c7/Models/User.py" --flask
 ```
+
+## flask在docker中运行
+- docker 中运行
+    1. 保存环境使用的库到requirement.txt
+        - pip freeze > requirement.txt
+    2. 创建Dockerfile 编辑python环境
+        - docker 时间时区
+            - /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+            - echo 'Asia/Shanghai' >/etc/timezone
+        - 安装需要的python库，使用豆瓣源 https://pypi.douban.com/simple/
+
+    3. 容器中运行
+    4. docker-compose运行Flask
+        - 创建 docker-compose.yml
+        - 配置运行环境
+        - 运行
+
+        done
